@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Hub | Pratyusha Pal</title>
+    <title>Professional Services & Projects Hub | Pratyusha Pal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b0b0c;
-            --card-bg: #141416;
-            --text-main: #f4f4f5;
-            --text-muted: #94949b;
-            --accent: #3b82f6;
-            --border-color: #27272a;
+            --bg-base: #07090e;
+            --bg-surface: #0f141d;
+            --border-subtle: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-main);
-            background-color: var(--bg-color);
+            background-color: var(--bg-base);
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #000000;
-            color: #fff;
-            padding: 3rem 2rem;
+            background-color: var(--bg-base);
+            padding: 4rem 2rem 3rem 2rem;
             text-align: center;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-subtle);
         }
-        h1 { margin: 0; font-size: 1.8rem; font-weight: 600; }
+        h1 { 
+            margin: 0; 
+            font-size: 2rem; 
+            font-weight: 600; 
+            letter-spacing: -0.025em;
+        }
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -40,63 +51,120 @@
         .btn-back {
             display: inline-block;
             background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            border: 1px solid var(--border-subtle);
             padding: 0.5rem 1.2rem;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 0.85rem;
-            margin-bottom: 2rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .btn-back:hover {
+            color: var(--text-main);
+            border-color: var(--accent);
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+            border-left: 3px solid var(--accent);
+            padding-left: 0.75rem;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.75rem;
+            margin-bottom: 3.5rem;
         }
         .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 8px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            padding: 2.25rem;
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
-        .project-card h3 { margin-top: 0; font-size: 1.2rem; }
-        .project-card p { color: var(--text-muted); font-size: 0.92rem; }
+        .project-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 25px var(--accent-glow);
+        }
+        .project-card h3 { 
+            margin-top: 0; 
+            font-size: 1.15rem; 
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        .project-card p { 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            font-weight: 300;
+            line-height: 1.6;
+        }
         .btn {
             display: inline-block;
-            background: #fff;
-            color: #000;
+            background: #f8fafc;
+            color: #090d16;
             text-decoration: none;
-            padding: 0.6rem 1.2rem;
+            padding: 0.65rem 1.25rem;
             font-weight: 500;
+            font-size: 0.88rem;
             border-radius: 6px;
             text-align: center;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             transition: background 0.2s;
         }
-        .btn:hover { background: #e4e4e7; }
+        .btn:hover { 
+            background: var(--accent); 
+            color: #000;
+        }
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 0.85rem;
+            font-weight: 300;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Deployed Web Agent Hub</h1>
+    <h1>Professional Services & Web Agents Hub</h1>
+    <p class="subtitle">Core Domain Expertise & Deployed Automation Architecture</p>
 </header>
 
 <div class="container">
     <a href="index.html" class="btn-back">&larr; Back to Home</a>
 
+    <!-- Core Professional Services -->
+    <div class="section-title">Core Professional Services & Frameworks</div>
     <div class="grid">
-        <!-- Tool 1 -->
+        <div class="project-card">
+            <div>
+                <h3>Corporate SEO Strategy</h3>
+                <p>Advanced search engine optimization frameworks, enterprise organic growth plans, and content team management structures.</p>
+            </div>
+            <a href="seo.html" class="btn">View Service Profile &rarr;</a>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3>Compliance & Remote Training</h3>
+                <p>Structured operational training frameworks, experiential learning models, and professional vocational safety guidelines.</p>
+            </div>
+            <a href="compliance.html" class="btn">View Service Profile &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Deployed Technical Tools -->
+    <div class="section-title">Interactive Technical Projects</div>
+    <div class="grid">
         <div class="project-card">
             <div>
                 <h3>1. Keyword Research Agent</h3>
@@ -105,7 +173,6 @@
             <a href="tool-keyword-research.html" class="btn">Launch Tool &rarr;</a>
         </div>
 
-        <!-- Tool 2 -->
         <div class="project-card">
             <div>
                 <h3>2. Brand & Multi-Lead Extractor</h3>
@@ -114,7 +181,6 @@
             <a href="tool-brand-identity.html" class="btn">Launch Tool &rarr;</a>
         </div>
 
-        <!-- Tool 3 -->
         <div class="project-card">
             <div>
                 <h3>3. Client Email Personalizer</h3>
