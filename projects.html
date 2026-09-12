@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Automation Projects | Pratyusha Pal</title>
+    <title>Projects Hub | Pratyusha Pal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
             --text-muted: #94949b;
             --accent: #3b82f6;
             --border-color: #27272a;
-            --card-hover-border: #52525b;
         }
         body {
             font-family: 'Poppins', sans-serif;
@@ -28,47 +27,17 @@
         header {
             background-color: #000000;
             color: #fff;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
         }
-        h1 { margin: 0; font-size: 2.2rem; font-weight: 600; }
+        h1 { margin: 0; font-size: 1.8rem; font-weight: 600; }
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 3rem 2rem;
         }
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 500;
-            border-bottom: 1px solid var(--text-main);
-            display: inline-block;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.3rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        .card {
-            background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.25s ease, border-color 0.25s ease;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--card-hover-border);
-        }
-        .card h3 { margin-top: 0; font-weight: 500; font-size: 1.15rem; color: #fff; }
-        .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
-        .btn {
+        .btn-back {
             display: inline-block;
             background: transparent;
             color: var(--text-main);
@@ -76,20 +45,38 @@
             padding: 0.5rem 1.2rem;
             text-decoration: none;
             border-radius: 4px;
-            font-weight: 500;
             font-size: 0.85rem;
-            text-align: center;
-            transition: all 0.2s ease;
-            width: fit-content;
-        }
-        .btn:hover {
-            background: var(--text-main);
-            color: #000;
-            border-color: var(--text-main);
-        }
-        .btn-back {
             margin-bottom: 2rem;
         }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-card h3 { margin-top: 0; font-size: 1.2rem; }
+        .project-card p { color: var(--text-muted); font-size: 0.92rem; }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 1.5rem;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #e4e4e7; }
         footer {
             text-align: center;
             padding: 2rem;
@@ -97,45 +84,43 @@
             border-top: 1px solid var(--border-color);
             font-size: 0.9rem;
         }
-        a { color: var(--text-main); text-decoration: none; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Interactive Automation Projects</h1>
+    <h1>Deployed Web Agent Hub</h1>
 </header>
 
 <div class="container">
-    <a href="index.html" class="btn btn-back">&larr; Back to Home</a>
-    
-    <div class="card" style="margin-bottom: 2.5rem;">
-        <h3>Operational Sandbox</h3>
-        <p>Test out live, lightweight agent interfaces designed for non-technical content and operations teams to streamline research, brand auditing, and client personalization.</p>
-    </div>
+    <a href="index.html" class="btn-back">&larr; Back to Home</a>
 
-    <h2 class="section-title">Available Tools & Workflows</h2>
     <div class="grid">
-        <div class="card">
+        <!-- Tool 1 -->
+        <div class="project-card">
             <div>
-                <h3>1. Automate Keyword Research</h3>
-                <p>Input any topic to scan competitor links and extract high-intent target keywords formatted into an optimized Markdown research brief.</p>
+                <h3>1. Keyword Research Agent</h3>
+                <p>Executes automated search sweeps, extracts competitor ranking URLs, and generates structured Markdown research briefs.</p>
             </div>
-            <a href="tool-keyword-research.html" class="btn">Try Tool &rarr;</a>
+            <a href="tool-keyword-research.html" class="btn">Launch Tool &rarr;</a>
         </div>
-        <div class="card">
+
+        <!-- Tool 2 -->
+        <div class="project-card">
             <div>
-                <h3>2. Brand Identity Extractor</h3>
-                <p>Provide a website link to automatically analyze and generate a structured document covering color palettes, tone, and business positioning.</p>
+                <h3>2. Brand & Multi-Lead Extractor</h3>
+                <p>Performs live DOM and metadata sweeps to build corporate audit reports and extract 4 targeted decision-maker leads.</p>
             </div>
-            <a href="tool-brand-identity.html" class="btn">Try Tool &rarr;</a>
+            <a href="tool-brand-identity.html" class="btn">Launch Tool &rarr;</a>
         </div>
-        <div class="card">
+
+        <!-- Tool 3 -->
+        <div class="project-card">
             <div>
-                <h3>3. Client Portfolio & Email Personalizer</h3>
-                <p>Simulate a client signup workflow that aggregates past purchase data to automatically draft customized, brand-aligned communication emails.</p>
+                <h3>3. Client Email Personalizer</h3>
+                <p>Generates targeted campaign outreach drafts (Sales, Product Launches, Renewals) with direct dispatch capabilities.</p>
             </div>
-            <a href="tool-client-onboarding.html" class="btn">Try Tool &rarr;</a>
+            <a href="tool-client-onboarding.html" class="btn">Launch Tool &rarr;</a>
         </div>
     </div>
 </div>
