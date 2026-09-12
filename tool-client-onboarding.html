@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Email Personalizer | Pratyusha Pal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0b0c;
+            --card-bg: #141416;
+            --text-main: #f4f4f5;
+            --text-muted: #94949b;
+            --accent: #3b82f6;
+            --border-color: #27272a;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        h1 { margin: 0; font-size: 1.8rem; font-weight: 600; }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .tool-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .input-field, select.input-field {
+            width: 100%;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1rem;
+            color: var(--text-main);
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        .input-field:focus { outline: none; border-color: var(--text-main); }
+        .btn {
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            width: fit-content;
+        }
+        .btn:hover { background: #e4e4e7; }
+        .btn-back {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+        .output-console {
+            background: #09090b;
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #a1a1aa;
+            display: none;
+            white-space: pre-wrap;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+        a { color: var(--text-main); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tool 3: Client Email Personalizer</h1>
+</header>
+
+<div class="container">
+    <a href="projects.html" class="btn-back">&larr; Back to Tools Hub</a>
+
+    <div class="tool-box">
+        <h3>Automated Onboarding & Communication Agent</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Simulate a new client signup by entering their details below to automatically generate a brand-aligned, customized outreach email based on their purchase history.</p>
+        
+        <div class="input-group">
+            <input type="text" id="clientName" class="input-field" placeholder="Client / Company Name (e.g., Apex Security Solutions)">
+            <select id="serviceSelect" class="input-field">
+                <option value="" disabled selected>Select Purchased Service / Course</option>
+                <option value="Door Supervisor & Compliance Training">Door Supervisor & Compliance Training</option>
+                <option value="Advanced SEO Content Framework">Advanced SEO Content Framework</option>
+                <option value="Workflow Automation & Zoho Integration">Workflow Automation & Zoho Integration</option>
+            </select>
+            <button onclick="runEmailPersonalizer()" class="btn">Generate Personalized Email</button>
+        </div>
+
+        <div id="outputConsole" class="output-console"></div>
+    </div>
+</div>
+
+<script>
+function runEmailPersonalizer() {
+    const client = document.getElementById('clientName').value.trim();
+    const service = document.getElementById('serviceSelect').value;
+    const consoleBox = document.getElementById('outputConsole');
+
+    if (!client || !service) {
+        alert('Please fill out all fields before generating the email.');
+        return;
+    }
+
+    consoleBox.style.display = 'block';
+    consoleBox.innerHTML = `[Aggregating Client Profile & Purchase Logs...]\nMatching brand guidelines and prior records for: "${client}"...\n\n### Generated Custom Outreach Email:\n--------------------------------------------------\n**Subject:** Streamlining your onboarding for ${service}\n\nHi Team at ${client},\n\nThank you for choosing us for your upcoming implementation of **${service}**. We have successfully registered your portfolio into our tracking pipeline.\n\nBased on your previous engagement with our operational frameworks, we have pre-configured your customized assessment schedule and assigned your dedicated project lead to eliminate any setup friction.\n\n**Next Steps:**\n1. Review your attached compliance checklist.\n2. Access your dedicated portal queue via Zoho Cliq.\n\nLooking forward to scaling your operations efficiently.\n\nBest regards,\n**Pratyusha Pal**\nOperations & Automation Consultant\n\n[Status: Email compiled and queued for delivery.]`;
+}
+</script>
+
+<footer>
+    <p>&copy; 2026 Pratyusha Pal. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
