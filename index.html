@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratyusha Pal | Operations & Automation</title>
+    <!-- Importing Poppins Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f8f9fa;
-            --text-main: #212529;
-            --accent: #0d6efd;
-            --card-bg: #ffffff;
+            --bg-color: #0f0f0f;
+            --card-bg: #18181b;
+            --text-main: #f4f4f5;
+            --text-muted: #a1a1aa;
+            --accent: #e4e4e7;
+            --border-color: #27272a;
         }
         body {
-            font-family: 'Calibri', 'Segoe UI', sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: var(--text-main);
             background-color: var(--bg-color);
@@ -20,23 +26,27 @@
             padding: 0;
         }
         header {
-            background-color: var(--text-main);
+            background-color: #000000;
             color: #fff;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
+            border-bottom: 1px solid var(--border-color);
         }
-        h1 { margin: 0; font-size: 2.5rem; }
-        h2 { font-weight: 300; font-size: 1.2rem; margin-top: 0.5rem; color: #adb5bd; }
+        h1 { margin: 0; font-size: 2.8rem; font-weight: 600; letter-spacing: -0.5px; }
+        h2 { font-weight: 300; font-size: 1.1rem; margin-top: 0.5rem; color: var(--text-muted); }
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 3rem 2rem;
         }
         .section-title {
-            font-size: 1.8rem;
-            border-bottom: 2px solid var(--accent);
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--accent);
             display: inline-block;
             margin-bottom: 1.5rem;
+            padding-bottom: 0.3rem;
+            color: var(--text-main);
         }
         .grid {
             display: grid;
@@ -46,28 +56,56 @@
         }
         .card {
             background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent);
+            padding: 2rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.2s ease;
         }
-        .card h3 { margin-top: 0; }
+        .card:hover {
+            border-color: var(--text-muted);
+        }
+        .card h3 { margin-top: 0; font-weight: 500; font-size: 1.25rem; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; }
         .btn {
             display: inline-block;
-            background: var(--accent);
-            color: #fff;
-            padding: 0.6rem 1.2rem;
+            background: var(--text-main);
+            color: #000;
+            padding: 0.6rem 1.4rem;
             text-decoration: none;
             border-radius: 4px;
+            font-weight: 500;
             margin-top: 1rem;
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+        .btn:hover {
+            background: var(--text-muted);
+        }
+        .btn-sm {
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            align-self: flex-start;
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+        .btn-sm:hover {
+            background: var(--text-main);
+            color: #000;
         }
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             margin-top: 2rem;
-            color: #6c757d;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
         }
-        a { color: var(--accent); text-decoration: none; }
+        a { color: var(--text-main); text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -81,23 +119,32 @@
 <div class="container">
     <div id="about">
         <h2 class="section-title">About Me</h2>
-        <p>I specialize in building high-conversion web content, managing robust compliance architectures, and engineering workflow automations. With an M.Sc. in Psychology, I bring a data-driven, behavioral approach to digital course architecture and operational efficiency.</p>
+        <p style="color: var(--text-muted); max-width: 800px;">I specialize in building high-conversion web content, managing robust compliance architectures, and engineering workflow automations. With an M.Sc. in Psychology, I bring a data-driven, behavioral approach to digital course architecture and operational efficiency.</p>
     </div>
 
-    <div id="services">
+    <div id="services" style="margin-top: 3rem;">
         <h2 class="section-title">Services</h2>
         <div class="grid">
             <div class="card">
-                <h3>SEO Content Strategy</h3>
-                <p>Developing high-ranking, search-intent optimized web copy, educational blogs, and product landing pages using raw HTML and advanced keyword mapping tools.</p>
+                <div>
+                    <h3>SEO Content Strategy</h3>
+                    <p>Developing high-ranking, search-intent optimized web copy, educational blogs, and product landing pages using raw HTML and advanced keyword mapping tools.</p>
+                </div>
+                <a href="seo.html" class="btn btn-sm">View Details</a>
             </div>
             <div class="card">
-                <h3>Compliance Architecture</h3>
-                <p>Structuring experiential learning frameworks, mock exams, and video scripts aligned with strict UK vocational and IQA standards.</p>
+                <div>
+                    <h3>Compliance Architecture</h3>
+                    <p>Structuring experiential learning frameworks, mock exams, and video scripts aligned with strict UK vocational and IQA standards.</p>
+                </div>
+                <a href="compliance.html" class="btn btn-sm">View Details</a>
             </div>
             <div class="card">
-                <h3>Workflow Automation</h3>
-                <p>Streamlining internal tracking systems using Zoho, Google Workspace, and AI generation tools to reduce manual bottlenecks and scale daily operations.</p>
+                <div>
+                    <h3>Workflow Automation</h3>
+                    <p>Streamlining internal tracking systems using Zoho, Google Workspace, and AI generation tools to reduce manual bottlenecks and scale daily operations.</p>
+                </div>
+                <a href="automation.html" class="btn btn-sm">View Details</a>
             </div>
         </div>
     </div>
@@ -128,7 +175,7 @@
 
     <div id="contact">
         <h2 class="section-title">Contact</h2>
-        <p>Ready to streamline your content and operations?</p>
+        <p style="color: var(--text-muted);">Ready to streamline your content and operations?</p>
         <p>Email: <a href="mailto:pratyushapal7@gmail.com">pratyushapal7@gmail.com</a></p>
         <p>LinkedIn: <a href="https://linkedin.com/in/pratyusha-pal-69b064303" target="_blank">linkedin.com/in/pratyusha-pal-69b064303</a></p>
     </div>
