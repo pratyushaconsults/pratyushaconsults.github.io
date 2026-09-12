@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automate Keyword Research | Pratyusha Pal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0b0c;
+            --card-bg: #141416;
+            --text-main: #f4f4f5;
+            --text-muted: #94949b;
+            --accent: #3b82f6;
+            --border-color: #27272a;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        h1 { margin: 0; font-size: 1.8rem; font-weight: 600; }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .tool-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .input-field {
+            flex: 1;
+            min-width: 280px;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1rem;
+            color: var(--text-main);
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .input-field:focus { outline: none; border-color: var(--text-main); }
+        .btn {
+            background: #fff;
+            color: #000;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: #e4e4e7; }
+        .btn-back {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+        .output-console {
+            background: #09090b;
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-top: 2rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #a1a1aa;
+            display: none;
+            white-space: pre-wrap;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+        a { color: var(--text-main); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tool 1: Automate Keyword Research</h1>
+</header>
+
+<div class="container">
+    <a href="projects.html" class="btn-back">&larr; Back to Tools Hub</a>
+
+    <div class="tool-box">
+        <h3>AI Keyword & Competitor Extraction Agent</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Type any subject below to simulate an automated search sweep, analyze competitor ranking URLs, and output a structured Markdown (.md) research blueprint.</p>
+        
+        <div class="input-group">
+            <input type="text" id="topicInput" class="input-field" placeholder="e.g., Door Supervisor Training in Cambridge">
+            <button onclick="runKeywordTool()" class="btn">Generate Research Brief</button>
+        </div>
+
+        <div id="outputConsole" class="output-console"></div>
+    </div>
+</div>
+
+<script>
+function runKeywordTool() {
+    const topic = document.getElementById('topicInput').value.trim();
+    const consoleBox = document.getElementById('outputConsole');
+
+    if (!topic) {
+        alert('Please enter a target topic.');
+        return;
+    }
+
+    consoleBox.style.display = 'block';
+    consoleBox.innerHTML = `[Connecting to Agent Pipeline...] \nScanning search grid for: "${topic}"...\nExtracting top ranking URLs...\n\n# Markdown Research Brief: ${topic}\n--------------------------------------------------\n- **Top Competitor 1:** https://hurak.com/course-locations/${topic.toLowerCase().replace(/[^a-z0-9]/g, '-')}\n- **Top Competitor 2:** https://uk-safety-accreditation.co.uk/courses\n\n### High-Intent Keyword Clusters:\n1. "${topic} online certification" (Search Vol: 1.4k, KD: Low)\n2. "Fast track ${topic}" (Search Vol: 920, KD: Easy)\n\n### Recommended Content Structure:\n- **H1:** Ultimate Guide to ${topic}\n- **H2:** Core Prerequisites & Regulatory Compliance\n- **H3:** Step-by-Step Booking & Assessment Workflow\n\n[Status: Research file compiled successfully & token-optimized.]`;
+}
+</script>
+
+<footer>
+    <p>&copy; 2026 Pratyusha Pal. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
