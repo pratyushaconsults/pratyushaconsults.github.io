@@ -3,67 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratyusha Pal | Operations & Automation Portfolio</title>
+    <title>Pratyusha Pal | Portfolio & Systems Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b0b0c;
-            --card-bg: #141416;
-            --text-main: #f4f4f5;
-            --text-muted: #94949b;
-            --accent: #3b82f6;
-            --border-color: #27272a;
+            --bg-base: #07090e;
+            --bg-surface: #0f141d;
+            --border-subtle: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             color: var(--text-main);
-            background-color: var(--bg-color);
+            background-color: var(--bg-base);
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #000000;
-            color: #fff;
-            padding: 4rem 2rem;
+            background-color: var(--bg-base);
+            padding: 4rem 2rem 3rem 2rem;
             text-align: center;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-subtle);
         }
-        h1 { margin: 0; font-size: 2.2rem; font-weight: 600; }
-        p.subtitle { color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem; }
+        h1 { 
+            margin: 0; 
+            font-size: 2.2rem; 
+            font-weight: 600; 
+            letter-spacing: -0.025em;
+        }
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 0.75rem;
+            font-weight: 300;
+        }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 4rem 2rem;
-            text-align: center;
+            padding: 3rem 2rem;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+            border-left: 3px solid var(--accent);
+            padding-left: 0.75rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.75rem;
+            margin-bottom: 3.5rem;
         }
         .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            padding: 2.25rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 25px var(--accent-glow);
+        }
+        .card h3 { 
+            margin-top: 0; 
+            font-size: 1.15rem; 
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        .card p { 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            font-weight: 300;
+            line-height: 1.6;
         }
         .btn {
             display: inline-block;
-            background: #fff;
-            color: #000;
+            background: #f8fafc;
+            color: #090d16;
             text-decoration: none;
-            padding: 0.85rem 2rem;
+            padding: 0.65rem 1.25rem;
             font-weight: 500;
+            font-size: 0.88rem;
             border-radius: 6px;
-            margin-top: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
             transition: background 0.2s;
         }
-        .btn:hover { background: #e4e4e7; }
+        .btn:hover { 
+            background: var(--accent); 
+            color: #000;
+        }
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
+            border-top: 1px solid var(--border-subtle);
+            font-size: 0.85rem;
+            font-weight: 300;
         }
     </style>
 </head>
@@ -71,14 +119,47 @@
 
 <header>
     <h1>Pratyusha Pal</h1>
-    <p class="subtitle">Remote Team Lead & Corporate Search Engine Optimization Strategist</p>
+    <p class="subtitle">Content Strategy, Compliance Architecture & Workflow Automation Hub</p>
 </header>
 
 <div class="container">
-    <div class="card">
-        <h2>Interactive Web Agent Portfolio</h2>
-        <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto;">Explore custom-built automation tools engineered to handle dynamic keyword research, live metadata extraction, multi-lead enrichment, and targeted client communication.</p>
-        <a href="projects.html" class="btn">Explore Deployed Tools &rarr;</a>
+    <div class="section-title">Navigation Hub</div>
+    <div class="grid">
+        <!-- SEO Card -->
+        <div class="card">
+            <div>
+                <h3>SEO Content Strategy</h3>
+                <p>Architecting high-ranking search engine strategies, geotargeted local landing pages, and authoritative educational blogs.</p>
+            </div>
+            <a href="seo.html" class="btn">Explore SEO Hub &rarr;</a>
+        </div>
+
+        <!-- Compliance Card -->
+        <div class="card">
+            <div>
+                <h3>Compliance & Operations</h3>
+                <p>Managing end-to-end candidate compliance portfolios, vocational assignments, and structured MCQ test frameworks.</p>
+            </div>
+            <a href="compliance.html" class="btn">Explore Compliance &rarr;</a>
+        </div>
+
+        <!-- Automation Card -->
+        <div class="card">
+            <div>
+                <h3>Workflow Automation & Systems</h3>
+                <p>Eliminating operational bottlenecks by engineering tracking workflows, AI-driven asset generation, and communication protocols.</p>
+            </div>
+            <a href="automation.html" class="btn">Explore Automation &rarr;</a>
+        </div>
+
+        <!-- Projects Card -->
+        <div class="card">
+            <div>
+                <h3>Professional Services & Projects</h3>
+                <p>Comprehensive hub showcasing core domain expertise, service profiles, and deployed interactive technical tools.</p>
+            </div>
+            <a href="project.html" class="btn">Explore Projects &rarr;</a>
+        </div>
     </div>
 </div>
 
