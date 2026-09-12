@@ -115,10 +115,10 @@
 
     <div class="tool-box">
         <h3>AI Keyword & Competitor Extraction Agent</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Type any subject below to simulate an automated search sweep, analyze competitor ranking URLs, and output a structured Markdown (.md) research blueprint.</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Type any subject below to simulate a dynamic search sweep, analyze unique competitor ranking URLs, and output a structured Markdown (.md) research blueprint.</p>
         
         <div class="input-group">
-            <input type="text" id="topicInput" class="input-field" placeholder="e.g., Door Supervisor Training in Cambridge">
+            <input type="text" id="topicInput" class="input-field" placeholder="e.g., Python Data Analysis Course">
             <button onclick="runKeywordTool()" class="btn">Generate Research Brief</button>
         </div>
 
@@ -128,16 +128,34 @@
 
 <script>
 function runKeywordTool() {
-    const topic = document.getElementById('topicInput').value.trim();
+    const rawTopic = document.getElementById('topicInput').value.trim();
     const consoleBox = document.getElementById('outputConsole');
 
-    if (!topic) {
+    if (!rawTopic) {
         alert('Please enter a target topic.');
         return;
     }
 
+    // Dynamic formatting based on input
+    const formattedSlug = rawTopic.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    const randomVol1 = Math.floor(Math.random() * 2500) + 400;
+    const randomVol2 = Math.floor(Math.random() * 900) + 150;
+    const kdOptions = ['Low', 'Easy', 'Moderate', 'Favorable'];
+    const randomKd = kdOptions[Math.floor(Math.random() * kdOptions.length)];
+
+    const domains = [
+        `https://www.top-accreditations.co.uk/guides/${formattedSlug}`,
+        `https://www.industry-standards.org/certifications/${formattedSlug}`,
+        `https://www.professional-hub.io/resources/${formattedSlug}`,
+        `https://www.global-learning-portal.net/courses/${formattedSlug}`
+    ];
+    
+    // Pick two unique pseudo-random domains based on string length
+    const d1 = domains[rawTopic.length % domains.length];
+    const d2 = domains[(rawTopic.length + 1) % domains.length];
+
     consoleBox.style.display = 'block';
-    consoleBox.innerHTML = `[Connecting to Agent Pipeline...] \nScanning search grid for: "${topic}"...\nExtracting top ranking URLs...\n\n# Markdown Research Brief: ${topic}\n--------------------------------------------------\n- **Top Competitor 1:** https://hurak.com/course-locations/${topic.toLowerCase().replace(/[^a-z0-9]/g, '-')}\n- **Top Competitor 2:** https://uk-safety-accreditation.co.uk/courses\n\n### High-Intent Keyword Clusters:\n1. "${topic} online certification" (Search Vol: 1.4k, KD: Low)\n2. "Fast track ${topic}" (Search Vol: 920, KD: Easy)\n\n### Recommended Content Structure:\n- **H1:** Ultimate Guide to ${topic}\n- **H2:** Core Prerequisites & Regulatory Compliance\n- **H3:** Step-by-Step Booking & Assessment Workflow\n\n[Status: Research file compiled successfully & token-optimized.]`;
+    consoleBox.innerHTML = `[Connecting to Dynamic Agent Pipeline...] \nScanning search grid for: "${rawTopic}"...\nExtracting top ranking competitors...\n\n# Markdown Research Brief: ${rawTopic}\n--------------------------------------------------\n- **Top Competitor 1:** ${d1}\n- **Top Competitor 2:** ${d2}\n\n### High-Intent Keyword Clusters:\n1. "${rawTopic} online certification" (Search Vol: ${randomVol1}, KD: ${randomKd})\n2. "Best fast-track ${rawTopic}" (Search Vol: ${randomVol2}, KD: Easy)\n\n### Recommended Content Structure:\n- **H1:** Ultimate Masterclass & Guide to ${rawTopic}\n- **H2:** Core Prerequisites & Practical Execution Framework\n- **H3:** Step-by-Step Evaluation & Certification Workflow\n\n[Status: Unique research file compiled successfully & token-optimized.]`;
 }
 </script>
 
