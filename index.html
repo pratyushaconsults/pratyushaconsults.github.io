@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratyusha Pal | Operations & Automation</title>
+    <title>Projects Hub | Pratyusha Pal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +15,6 @@
             --text-muted: #94949b;
             --accent: #3b82f6;
             --border-color: #27272a;
-            --card-hover-border: #52525b;
         }
         body {
             font-family: 'Poppins', sans-serif;
@@ -26,149 +25,103 @@
             padding: 0;
         }
         header {
-            background: linear-gradient(to bottom, #000000, #0b0b0c);
+            background-color: #000000;
             color: #fff;
-            padding: 6rem 2rem 5rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
         }
-        h1 { margin: 0; font-size: 3rem; font-weight: 600; letter-spacing: -0.5px; }
-        h2 { font-weight: 300; font-size: 1.2rem; margin-top: 0.75rem; color: var(--text-muted); }
+        h1 { margin: 0; font-size: 1.8rem; font-weight: 600; }
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
         }
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 500;
-            border-bottom: 2px solid var(--text-main);
+        .btn-back {
             display: inline-block;
-            margin-bottom: 2rem;
-            padding-bottom: 0.2rem;
+            background: transparent;
             color: var(--text-main);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-bottom: 3.5rem;
         }
-        .card {
+        .project-card {
             background: var(--card-bg);
-            padding: 2.2rem;
-            border-radius: 8px;
             border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--card-hover-border);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        .card h3 { margin-top: 0; font-weight: 500; font-size: 1.25rem; color: #fff; }
-        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .project-card h3 { margin-top: 0; font-size: 1.2rem; }
+        .project-card p { color: var(--text-muted); font-size: 0.92rem; }
         .btn {
             display: inline-block;
             background: #fff;
             color: #000;
-            padding: 0.65rem 1.5rem;
             text-decoration: none;
-            border-radius: 6px;
+            padding: 0.6rem 1.2rem;
             font-weight: 500;
+            border-radius: 6px;
             text-align: center;
-            transition: background 0.2s ease, transform 0.1s ease;
+            margin-top: 1.5rem;
+            transition: background 0.2s;
         }
-        .btn:hover {
-            background: #e4e4e7;
-            transform: scale(1.02);
-        }
-        .btn-sm {
-            padding: 0.5rem 1.1rem;
-            font-size: 0.85rem;
-            align-self: flex-start;
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-        }
-        .btn-sm:hover {
-            background: var(--text-main);
-            color: #000;
-            border-color: var(--text-main);
-        }
+        .btn:hover { background: #e4e4e7; }
         footer {
             text-align: center;
-            padding: 3rem;
+            padding: 2rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
             font-size: 0.9rem;
         }
-        a { color: var(--text-main); text-decoration: none; }
-        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Pratyusha Pal</h1>
-    <h2>Content Strategist & Operations Consultant</h2>
-    <div style="margin-top: 2rem;">
-        <a href="#contact" class="btn">Get in Touch</a>
-    </div>
+    <h1>Deployed Web Agent Hub</h1>
 </header>
 
 <div class="container">
-    <div id="about">
-        <h2 class="section-title">About Me</h2>
-        <p style="color: var(--text-muted); max-width: 850px; font-size: 1.05rem;">I specialize in building high-conversion web content, managing robust compliance architectures, and engineering workflow automations. With an M.Sc. in Psychology, I bring a data-driven, behavioral approach to digital course architecture and operational efficiency.</p>
-    </div>
+    <a href="index.html" class="btn-back">&larr; Back to Home</a>
 
-    <div id="services" style="margin-top: 3.5rem;">
-        <h2 class="section-title">Services</h2>
-        <div class="grid">
-            <div class="card">
-                <div>
-                    <h3>SEO Content Strategy</h3>
-                    <p>Developing high-ranking, search-intent optimized web copy, educational blogs, and product landing pages using raw HTML and advanced keyword mapping tools.</p>
-                </div>
-                <a href="seo.html" class="btn btn-sm">View Details &rarr;</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3>Compliance Architecture</h3>
-                    <p>Structuring experiential learning frameworks, mock exams, and video scripts aligned with strict UK vocational and IQA standards.</p>
-                </div>
-                <a href="compliance.html" class="btn btn-sm">View Details &rarr;</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3>Workflow Automation</h3>
-                    <p>Streamlining internal tracking systems using Zoho, Google Workspace, and AI generation tools to reduce manual bottlenecks and scale daily operations.</p>
-                </div>
-                <a href="automation.html" class="btn btn-sm">View Details &rarr;</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="projects" style="margin-top: 3.5rem;">
-        <h2 class="section-title">Interactive Mini Projects</h2>
-        <div class="card">
+    <div class="grid">
+        <!-- Tool 1 -->
+        <div class="project-card">
             <div>
-                <h3>Explore Live Automation Tools</h3>
-                <p>Test interactive agent workflows for automated keyword research, brand identity auditing, and client portfolio email personalizers.</p>
+                <h3>1. Keyword Research Agent</h3>
+                <p>Executes automated search sweeps, extracts competitor ranking URLs, and generates structured Markdown research briefs.</p>
             </div>
-            <a href="projects.html" class="btn btn-sm" style="margin-top: 1rem;">Open Projects Hub &rarr;</a>
+            <a href="tool-keyword-research.html" class="btn">Launch Tool &rarr;</a>
         </div>
-    </div>
 
-    <div id="contact" style="margin-top: 3.5rem;">
-        <h2 class="section-title">Contact</h2>
-        <p style="color: var(--text-muted);">Ready to streamline your content and operations?</p>
-        <p>Email: <a href="mailto:pratyushapal7@gmail.com">pratyushapal7@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/pratyusha-pal-69b064303" target="_blank">linkedin.com/in/pratyusha-pal-69b064303</a></p>
+        <!-- Tool 2 -->
+        <div class="project-card">
+            <div>
+                <h3>2. Brand & Multi-Lead Extractor</h3>
+                <p>Performs live DOM and metadata sweeps to build corporate audit reports and extract 4 targeted decision-maker leads.</p>
+            </div>
+            <a href="tool-brand-identity.html" class="btn">Launch Tool &rarr;</a>
+        </div>
+
+        <!-- Tool 3 -->
+        <div class="project-card">
+            <div>
+                <h3>3. Client Email Personalizer</h3>
+                <p>Generates targeted campaign outreach drafts (Sales, Product Launches, Renewals) with direct dispatch capabilities.</p>
+            </div>
+            <a href="tool-client-onboarding.html" class="btn">Launch Tool &rarr;</a>
+        </div>
     </div>
 </div>
 
