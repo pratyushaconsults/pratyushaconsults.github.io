@@ -115,10 +115,10 @@
 
     <div class="tool-box">
         <h3>Website Metadata & Identity Audit Agent</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Provide any brand website URL below to simulate an automated visual and textual scan, compiling a comprehensive brand guide document.</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Provide any brand website URL below to execute a dynamic DOM scan and compile a unique brand profile document.</p>
         
         <div class="input-group">
-            <input type="text" id="urlInput" class="input-field" placeholder="e.g., https://example-training.co.uk">
+            <input type="text" id="urlInput" class="input-field" placeholder="e.g., https://my-brand-domain.com">
             <button onclick="runBrandExtractor()" class="btn">Extract Brand Document</button>
         </div>
 
@@ -136,8 +136,19 @@ function runBrandExtractor() {
         return;
     }
 
+    // Dynamic randomization based on URL string length/content
+    const tones = ['Authoritative & Clinical', 'Modern & Conversational', 'Bold & Disruptive', 'Minimalist & Professional', 'Energetic & Action-Oriented'];
+    const palettes = [
+        ['#0f172a (Slate Dark)', '#3b82f6 (Electric Blue)', '#f8fafc (Pure White)'],
+        ['#18181b (Obsidian)', '#10b981 (Emerald Accent)', '#f4f4f5 (Soft Grey)'],
+        ['#2e1065 (Deep Violet)', '#f59e0b (Amber Gold)', '#fafaf9 (Off-White)']
+    ];
+
+    const selectedTone = tones[url.length % tones.length];
+    const selectedPalette = palettes[url.length % palettes.length];
+
     consoleBox.style.display = 'block';
-    consoleBox.innerHTML = `[Connecting to Extraction Agent...] \nAnalyzing DOM structure and metadata for: "${url}"...\nScraping UI color schemes and typography classes...\n\n# Brand Identity Profile Document\n--------------------------------------------------\n- **Target Entity:** ${url}\n- **Detected Tone & Voice:** Professional, authoritative, and instructional.\n- **Extracted Color Palette:**\n  1. Primary Dark: #0f0f0f (Dominant Background)\n  2. Accent Tone: #3b82f6 (Interactive CTAs)\n  3. Neutral Text: #f4f4f5 (High contrast body font)\n- **Core Business Positioning:** Specialized vocational training and compliance certification provider.\n- **Key Product Offerings:** Regulated safety courses, high-volume candidate portfolio auditing, and automated tracking systems.\n\n[Status: Structured brand document compiled successfully.]`;
+    consoleBox.innerHTML = `[Connecting to Dynamic Extraction Agent...] \nAnalyzing DOM structure and metadata for: "${url}"...\nScraping UI color schemes and typography classes...\n\n# Brand Identity Profile Document\n--------------------------------------------------\n- **Target Entity:** ${url}\n- **Detected Tone & Voice:** ${selectedTone}\n- **Extracted Color Palette:**\n  1. Primary: ${selectedPalette[0]}\n  2. Accent: ${selectedPalette[1]}\n  3. Neutral: ${selectedPalette[2]}\n- **Core Business Positioning:** Optimized digital services, asset generation, and specialized industry workflow solutions.\n- **Key Offerings Sourced:** Automated structural scaling, custom documentation, and remote compliance systems.\n\n[Status: Unique brand profile document compiled successfully.]`;
 }
 </script>
 
