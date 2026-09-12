@@ -116,15 +116,16 @@
 
     <div class="tool-box">
         <h3>Automated Onboarding & Communication Agent</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Simulate a new client signup by entering their details below to automatically generate a brand-aligned, customized outreach email based on their purchase history.</p>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">Input custom client details and select a service to generate a uniquely tailored onboarding email draft based on profile parameters.</p>
         
         <div class="input-group">
-            <input type="text" id="clientName" class="input-field" placeholder="Client / Company Name (e.g., Apex Security Solutions)">
+            <input type="text" id="clientName" class="input-field" placeholder="Client / Company Name (e.g., Nexus Global Ltd)">
             <select id="serviceSelect" class="input-field">
                 <option value="" disabled selected>Select Purchased Service / Course</option>
                 <option value="Door Supervisor & Compliance Training">Door Supervisor & Compliance Training</option>
                 <option value="Advanced SEO Content Framework">Advanced SEO Content Framework</option>
                 <option value="Workflow Automation & Zoho Integration">Workflow Automation & Zoho Integration</option>
+                <option value="AI Multimedia Asset Generation">AI Multimedia Asset Generation</option>
             </select>
             <button onclick="runEmailPersonalizer()" class="btn">Generate Personalized Email</button>
         </div>
@@ -144,8 +145,10 @@ function runEmailPersonalizer() {
         return;
     }
 
+    const ticketId = Math.floor(Math.random() * 89999) + 10000;
+
     consoleBox.style.display = 'block';
-    consoleBox.innerHTML = `[Aggregating Client Profile & Purchase Logs...]\nMatching brand guidelines and prior records for: "${client}"...\n\n### Generated Custom Outreach Email:\n--------------------------------------------------\n**Subject:** Streamlining your onboarding for ${service}\n\nHi Team at ${client},\n\nThank you for choosing us for your upcoming implementation of **${service}**. We have successfully registered your portfolio into our tracking pipeline.\n\nBased on your previous engagement with our operational frameworks, we have pre-configured your customized assessment schedule and assigned your dedicated project lead to eliminate any setup friction.\n\n**Next Steps:**\n1. Review your attached compliance checklist.\n2. Access your dedicated portal queue via Zoho Cliq.\n\nLooking forward to scaling your operations efficiently.\n\nBest regards,\n**Pratyusha Pal**\nOperations & Automation Consultant\n\n[Status: Email compiled and queued for delivery.]`;
+    consoleBox.innerHTML = `[Aggregating Client Profile & Purchase Logs for "${client}"]...\nMatching brand guidelines and prior records...\n\n### Generated Custom Outreach Email:\n--------------------------------------------------\n**Subject:** Priority Onboarding & Pipeline Setup: ${service}\n\nDear Team at ${client},\n\nThank you for partnering with us for your rollout of **${service}**. Your account has been registered under dispatch ticket **#${ticketId}**.\n\nBased on your historical configuration preferences, we have pre-calibrated your tracking environment and synced your deliverables queue with our central automation tracking framework to eliminate setup delays.\n\n**Immediate Next Steps:**\n1. Review your localized project scope document.\n2. Access your dedicated management board via Zoho Cliq.\n\nWe look forward to accelerating your operational efficiency.\n\nWarm regards,\n\n**Pratyusha Pal**\nOperations & Automation Consultant\n\n[Status: Email compiled and queued for unique dispatch.]`;
 }
 </script>
 
