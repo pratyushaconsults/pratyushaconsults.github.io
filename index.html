@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratyusha Pal | Portfolio & Systems Hub</title>
+    <title>Professional Services & Web Agents Hub | Pratyusha Pal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,20 +33,37 @@
         }
         h1 { 
             margin: 0; 
-            font-size: 2.2rem; 
+            font-size: 2rem; 
             font-weight: 600; 
             letter-spacing: -0.025em;
         }
         p.subtitle {
             color: var(--text-muted);
-            font-size: 1rem;
-            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
             font-weight: 300;
         }
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 3rem 2rem;
+        }
+        .btn-back {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-subtle);
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .btn-back:hover {
+            color: var(--text-main);
+            border-color: var(--accent);
         }
         .section-title {
             font-size: 1.25rem;
@@ -62,7 +79,7 @@
             gap: 1.75rem;
             margin-bottom: 3.5rem;
         }
-        .card {
+        .project-card {
             background: var(--bg-surface);
             border: 1px solid var(--border-subtle);
             padding: 2.25rem;
@@ -72,17 +89,17 @@
             justify-content: space-between;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-        .card:hover {
+        .project-card:hover {
             border-color: rgba(56, 189, 248, 0.4);
             box-shadow: 0 0 25px var(--accent-glow);
         }
-        .card h3 { 
+        .project-card h3 { 
             margin-top: 0; 
             font-size: 1.15rem; 
             font-weight: 500;
             letter-spacing: -0.01em;
         }
-        .card p { 
+        .project-card p { 
             color: var(--text-muted); 
             font-size: 0.9rem; 
             font-weight: 300;
@@ -118,47 +135,92 @@
 <body>
 
 <header>
-    <h1>Pratyusha Pal</h1>
-    <p class="subtitle">Content Strategy, Compliance Architecture & Workflow Automation Hub</p>
+    <h1>Professional Services & Web Agents Hub</h1>
+    <p class="subtitle">Core Domain Expertise & Deployed Automation Architecture</p>
 </header>
 
 <div class="container">
-    <div class="section-title">Navigation Hub</div>
+    <!-- Core Professional Services -->
+    <div class="section-title">Core Professional Services & Frameworks</div>
     <div class="grid">
-        <!-- SEO Card -->
-        <div class="card">
+        <div class="project-card">
             <div>
                 <h3>SEO Content Strategy</h3>
                 <p>Architecting high-ranking search engine strategies, geotargeted local landing pages, and authoritative educational blogs.</p>
             </div>
-            <a href="seo.html" class="btn">Explore SEO Hub &rarr;</a>
+            <a href="seo.html" class="btn">View Service Profile &rarr;</a>
         </div>
 
-        <!-- Compliance Card -->
-        <div class="card">
+        <div class="project-card">
             <div>
                 <h3>Compliance & Operations</h3>
                 <p>Managing end-to-end candidate compliance portfolios, vocational assignments, and structured MCQ test frameworks.</p>
             </div>
-            <a href="compliance.html" class="btn">Explore Compliance &rarr;</a>
+            <a href="compliance.html" class="btn">View Service Profile &rarr;</a>
         </div>
 
-        <!-- Automation Card -->
-        <div class="card">
+        <div class="project-card">
             <div>
                 <h3>Workflow Automation & Systems</h3>
                 <p>Eliminating operational bottlenecks by engineering tracking workflows, AI-driven asset generation, and communication protocols.</p>
             </div>
-            <a href="automation.html" class="btn">Explore Automation &rarr;</a>
+            <a href="automation.html" class="btn">View Service Profile &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Explore Trial Projects -->
+    <div class="section-title">Explore Trial Projects</div>
+    <div class="grid">
+        <div class="project-card">
+            <div>
+                <h3>1. Keyword Research Agent</h3>
+                <p>Executes automated search sweeps, extracts competitor ranking URLs, and generates structured Markdown research briefs.</p>
+            </div>
+            <a href="tool-keyword-research.html" class="btn">Launch Tool &rarr;</a>
         </div>
 
-        <!-- Projects Card -->
-        <div class="card">
+        <div class="project-card">
             <div>
-                <h3>Professional Services & Projects</h3>
-                <p>Comprehensive hub showcasing core domain expertise, service profiles, and deployed interactive technical tools.</p>
+                <h3>2. Brand & Multi-Lead Extractor</h3>
+                <p>Performs live DOM and metadata sweeps to build corporate audit reports and extract 4 targeted decision-maker leads.</p>
             </div>
-            <a href="project.html" class="btn">Explore Projects &rarr;</a>
+            <a href="tool-brand-identity.html" class="btn">Launch Tool &rarr;</a>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3>3. Client Email Personalizer</h3>
+                <p>Generates targeted campaign outreach drafts (Sales, Product Launches, Renewals) with direct dispatch capabilities.</p>
+            </div>
+            <a href="tool-client-onboarding.html" class="btn">Launch Tool &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Contact & Connect -->
+    <div class="section-title">Get in Touch</div>
+    <div class="grid">
+        <div class="project-card">
+            <div>
+                <h3>Direct Phone</h3>
+                <p>Reach out directly via phone or WhatsApp for quick professional alignments.</p>
+            </div>
+            <a href="tel:7864049024" class="btn">Call 7864049024 &rarr;</a>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3>Email Inquiry</h3>
+                <p>Send project requirements, consultation queries, or collaboration notes.</p>
+            </div>
+            <a href="mailto:pratyushapal7@gmail.com" class="btn">Send Email &rarr;</a>
+        </div>
+
+        <div class="project-card">
+            <div>
+                <h3>LinkedIn Profile</h3>
+                <p>Connect professionally and review career updates and network milestones.</p>
+            </div>
+            <a href="https://www.linkedin.com/in/pratyusha-pal-69b064303/" target="_blank" class="btn">Visit LinkedIn &rarr;</a>
         </div>
     </div>
 </div>
