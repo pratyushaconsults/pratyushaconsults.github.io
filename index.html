@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Hub | Pratyusha Pal</title>
+    <title>Pratyusha Pal | Operations & Automation Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -27,52 +27,33 @@
         header {
             background-color: #000000;
             color: #fff;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
         }
-        h1 { margin: 0; font-size: 1.8rem; font-weight: 600; }
+        h1 { margin: 0; font-size: 2.2rem; font-weight: 600; }
+        p.subtitle { color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem; }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
+            text-align: center;
         }
-        .btn-back {
-            display: inline-block;
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            padding: 0.5rem 1.2rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-bottom: 2rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        .project-card {
+        .card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            padding: 2rem;
+            padding: 3rem 2rem;
             border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            margin-top: 2rem;
         }
-        .project-card h3 { margin-top: 0; font-size: 1.2rem; }
-        .project-card p { color: var(--text-muted); font-size: 0.92rem; }
         .btn {
             display: inline-block;
             background: #fff;
             color: #000;
             text-decoration: none;
-            padding: 0.6rem 1.2rem;
+            padding: 0.85rem 2rem;
             font-weight: 500;
             border-radius: 6px;
-            text-align: center;
             margin-top: 1.5rem;
             transition: background 0.2s;
         }
@@ -89,39 +70,15 @@
 <body>
 
 <header>
-    <h1>Deployed Web Agent Hub</h1>
+    <h1>Pratyusha Pal</h1>
+    <p class="subtitle">Remote Team Lead & Corporate Search Engine Optimization Strategist</p>
 </header>
 
 <div class="container">
-    <a href="index.html" class="btn-back">&larr; Back to Home</a>
-
-    <div class="grid">
-        <!-- Tool 1 -->
-        <div class="project-card">
-            <div>
-                <h3>1. Keyword Research Agent</h3>
-                <p>Executes automated search sweeps, extracts competitor ranking URLs, and generates structured Markdown research briefs.</p>
-            </div>
-            <a href="tool-keyword-research.html" class="btn">Launch Tool &rarr;</a>
-        </div>
-
-        <!-- Tool 2 -->
-        <div class="project-card">
-            <div>
-                <h3>2. Brand & Multi-Lead Extractor</h3>
-                <p>Performs live DOM and metadata sweeps to build corporate audit reports and extract 4 targeted decision-maker leads.</p>
-            </div>
-            <a href="tool-brand-identity.html" class="btn">Launch Tool &rarr;</a>
-        </div>
-
-        <!-- Tool 3 -->
-        <div class="project-card">
-            <div>
-                <h3>3. Client Email Personalizer</h3>
-                <p>Generates targeted campaign outreach drafts (Sales, Product Launches, Renewals) with direct dispatch capabilities.</p>
-            </div>
-            <a href="tool-client-onboarding.html" class="btn">Launch Tool &rarr;</a>
-        </div>
+    <div class="card">
+        <h2>Interactive Web Agent Portfolio</h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto;">Explore custom-built automation tools engineered to handle dynamic keyword research, live metadata extraction, multi-lead enrichment, and targeted client communication.</p>
+        <a href="projects.html" class="btn">Explore Deployed Tools &rarr;</a>
     </div>
 </div>
 
