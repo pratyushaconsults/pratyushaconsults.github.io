@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Samples & Articles | Pratyusha Pal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #07090e;
+            --bg-surface: #0f141d;
+            --border-subtle: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-base);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--bg-base);
+            padding: 4.5rem 2rem 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        h1 { 
+            margin: 0; 
+            font-size: 2.5rem; 
+            font-weight: 600; 
+            letter-spacing: -0.025em;
+        }
+        p.subtitle {
+            color: var(--accent);
+            font-size: 1.15rem;
+            margin-top: 0.75rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+            border-left: 3px solid var(--accent);
+            padding-left: 0.75rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.75rem;
+            margin-bottom: 3.5rem;
+        }
+        .project-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            padding: 2.25rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+        }
+        .project-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 25px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+        .project-card h3 { 
+            margin-top: 0; 
+            font-size: 1.15rem; 
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        .project-card p { 
+            color: var(--text-muted); 
+            font-size: 0.9rem; 
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--accent);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #f8fafc;
+            color: #090d16;
+            text-decoration: none;
+            padding: 0.65rem 1.25rem;
+            font-weight: 500;
+            font-size: 0.88rem;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 2rem;
+            transition: background 0.2s, transform 0.1s;
+        }
+        .btn:hover { 
+            background: var(--accent); 
+            color: #000;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-subtle);
+            font-size: 0.85rem;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Writing Portfolio</h1>
+    <p class="subtitle">Curated Articles, SEO Blogs & Industry Insights</p>
+</header>
+
+<div class="container">
+    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+    <div class="section-title">Published & Sample Articles</div>
+    <div class="grid">
+        <!-- Sample Article 1 -->
+        <div class="project-card">
+            <div>
+                <span class="tag">SEO Pillar Post</span>
+                <h3>1. The Future of Content Architecture: Scaling Organic Search in 2026</h3>
+                <p>An in-depth guide detailing how topical authority and semantic search frameworks dictate long-term SERP dominance.</p>
+            </div>
+            <a href="article-1.html" class="btn">Read Article &rarr;</a>
+        </div>
+
+        <!-- Sample Article 2 -->
+        <div class="project-card">
+            <div>
+                <span class="tag">Compliance & Ops</span>
+                <h3>2. Navigating Vocational Compliance & Standardized Training Frameworks</h3>
+                <p>Breaking down the logistics of designing foolproof MCQ structures and rigorous safety training documentation.</p>
+            </div>
+            <a href="article-2.html" class="btn">Read Article &rarr;</a>
+        </div>
+
+        <!-- Sample Article 3 -->
+        <div class="project-card">
+            <div>
+                <span class="tag">Workflow Automation</span>
+                <h3>3. Eliminating Bottlenecks: How AI-Driven Assets Transform Editorial Teams</h3>
+                <p>Exploring practical strategies for blending automated research briefs with human oversight to scale content output.</p>
+            </div>
+            <a href="article-3.html" class="btn">Read Article &rarr;</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Pratyusha Pal. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
