@@ -3,188 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing Samples & Articles | Pratyusha Pal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Writing Portfolio — Articles & Insights</title>
+    <meta name="description" content="Explore modern content strategy articles, SEO deep dives, and digital insights.">
     <style>
         :root {
-            --bg-base: #07090e;
-            --bg-surface: #0f141d;
-            --border-subtle: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-glow: rgba(56, 189, 248, 0.15);
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --accent-color: #f3f4f6;
         }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-base);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.7;
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: var(--bg-base);
-            padding: 4.5rem 2rem 3rem 2rem;
-            text-align: center;
-            border-bottom: 1px solid var(--border-subtle);
+
+        main {
+            max-width: 800px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
         }
-        h1 { 
-            margin: 0; 
-            font-size: 2.5rem; 
-            font-weight: 600; 
-            letter-spacing: -0.025em;
+
+        h1 {
+            font-size: 2.25rem;
+            color: #111827;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
         }
-        p.subtitle {
-            color: var(--accent);
-            font-size: 1.15rem;
-            margin-top: 0.75rem;
-            font-weight: 400;
-            letter-spacing: -0.01em;
+
+        .article-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-        .section-title {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 1.25rem;
-            color: var(--text-main);
-            border-left: 3px solid var(--accent);
-            padding-left: 0.75rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-            gap: 1.75rem;
-            margin-bottom: 3.5rem;
-        }
-        .project-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            padding: 2.25rem;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-        }
-        .project-card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            box-shadow: 0 0 25px var(--accent-glow);
+
+        .article-card:hover {
             transform: translateY(-2px);
+            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.08);
         }
-        .project-card h3 { 
-            margin-top: 0; 
-            font-size: 1.15rem; 
-            font-weight: 500;
-            letter-spacing: -0.01em;
+
+        .article-card h2 {
+            margin-top: 0;
+            font-size: 1.35rem;
         }
-        .project-card p { 
-            color: var(--text-muted); 
-            font-size: 0.9rem; 
-            font-weight: 300;
-            line-height: 1.6;
+
+        .article-card h2 a {
+            color: #111827;
+            text-decoration: none;
         }
-        .tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--accent);
-            background: rgba(56, 189, 248, 0.1);
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
+
+        .article-card h2 a:hover {
+            color: var(--primary-color);
+        }
+
+        .meta {
+            font-size: 0.85rem;
+            color: #6b7280;
             margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
-        .btn {
+
+        p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+
+        .read-more {
             display: inline-block;
-            background: #f8fafc;
-            color: #090d16;
+            color: var(--primary-color);
+            font-weight: 600;
             text-decoration: none;
-            padding: 0.65rem 1.25rem;
-            font-weight: 500;
-            font-size: 0.88rem;
-            border-radius: 6px;
-            text-align: center;
-            margin-top: 2rem;
-            transition: background 0.2s, transform 0.1s;
+            margin-top: 0.5rem;
         }
-        .btn:hover { 
-            background: var(--accent); 
-            color: #000;
+
+        .read-more:hover {
+            text-decoration: underline;
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .back-link:hover {
-            color: var(--accent);
-        }
+
         footer {
             text-align: center;
-            padding: 2.5rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-subtle);
-            font-size: 0.85rem;
-            font-weight: 300;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Writing Portfolio</h1>
-    <p class="subtitle">Curated Articles, SEO Blogs & Industry Insights</p>
-</header>
+    <main>
+        <h1>Articles & Writing Portfolio</h1>
+        <p>A collection of modern content strategy guides, technical insights, and search optimization frameworks.</p>
 
-<div class="container">
-    <a href="index.html" class="back-link">&larr; Back to Main Portfolio</a>
-
-    <div class="section-title">Published & Sample Articles</div>
-    <div class="grid">
-        <!-- Sample Article 1 -->
-        <div class="project-card">
-            <div>
-                <span class="tag">SEO Pillar Post</span>
-                <h3>1. The Future of Content Architecture: Scaling Organic Search in 2026</h3>
-                <p>An in-depth guide detailing how topical authority and semantic search frameworks dictate long-term SERP dominance.</p>
-            </div>
-            <a href="article-1.html" class="btn">Read Article &rarr;</a>
+        <!-- Article 1 Card -->
+        <div class="article-card">
+            <div class="meta">Content Strategy &bull; 2026 Edition</div>
+            <h2><a href="article-1.html">Differences Between SEO, AEO, and GEO — Current Trends in 2026</a></h2>
+            <p>An expert guide exploring how discovery has expanded beyond traditional SERPs into AI tools, breaking down search intent, machine readability, and citation strategies.</p>
+            <a href="article-1.html" class="read-more">Read Full Article &rarr;</a>
         </div>
 
-        <!-- Sample Article 2 -->
-        <div class="project-card">
-            <div>
-                <span class="tag">Compliance & Ops</span>
-                <h3>2. Navigating Vocational Compliance & Standardized Training Frameworks</h3>
-                <p>Breaking down the logistics of designing foolproof MCQ structures and rigorous safety training documentation.</p>
-            </div>
-            <a href="article-2.html" class="btn">Read Article &rarr;</a>
-        </div>
+        <!-- You can easily add more article cards here later as you write more pieces! -->
 
-        <!-- Sample Article 3 -->
-        <div class="project-card">
-            <div>
-                <span class="tag">Workflow Automation</span>
-                <h3>3. Eliminating Bottlenecks: How AI-Driven Assets Transform Editorial Teams</h3>
-                <p>Exploring practical strategies for blending automated research briefs with human oversight to scale content output.</p>
-            </div>
-            <a href="article-3.html" class="btn">Read Article &rarr;</a>
-        </div>
-    </div>
-</div>
+    </main>
 
-<footer>
-    <p>&copy; 2026 Pratyusha Pal. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Professional Writing Portfolio. Built with modern content strategy.</p>
+    </footer>
 
 </body>
 </html>
